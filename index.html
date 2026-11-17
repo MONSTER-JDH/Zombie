@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Арена монстров</title>
+<title>Арена зомби</title>
 <style>
 :root{--bg:#0b0d1a;--tx:#f2f0ff;--ac:#ffb347;--card:#1a1d36;--bd:#3b3f73}
 @media (prefers-color-scheme:dark){:root{--bg:#0b0d1a}}
@@ -40,7 +40,7 @@ input{font:inherit;font-weight:700;text-align:center;color:var(--tx);background:
 #ros{position:fixed;right:10px;top:calc(env(safe-area-inset-top,0px) + 54px);display:flex;flex-direction:column;gap:6px;pointer-events:none;font-size:12px;font-weight:700;z-index:5}
 #emo{position:fixed;right:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);display:none;gap:6px;z-index:5}
 #emo button{min-width:0;padding:8px 10px;font-size:20px}
-</style></head><body>
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0b0d1a"><link rel="apple-touch-icon" href="icon-192.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Арена зомби"></head><body>
 <canvas id="cv"></canvas>
 <div id="hud"><span id="lv">Ур. 1</span><div id="bar"><div id="hp"></div><span id="hpt"></span></div><span id="pl"></span><span id="co">🪙 0</span></div>
 <div class="ov" id="menu">
@@ -354,4 +354,4 @@ $('re').onclick=()=>{$('over').classList.add('h');init()};
   ;}
  else $('mp').textContent='Кооператив недоступен в этом режиме (нужна ссылка Claude для участников)'}catch(e){$('mp').textContent='Кооператив недоступен'}})();
 requestAnimationFrame(loop);
-</script></body></html>
+</script><script>if('serviceWorker' in navigator&&/^https?:/.test(location.protocol))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script></body></html>
